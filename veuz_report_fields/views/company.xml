@@ -1,0 +1,52 @@
+<odoo>
+    <record id="view_company_report_form" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.report</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='country_id']" position="after">
+                <field name="invoice_without_header_footer" invisible="1"/>
+                <field name="total_on_header" invisible="1"/>
+                <field name="approved_by" invisible="1"/>
+                <field name="received_by" invisible="1"/>
+                <field name="prepared_by" invisible="1"/>
+                <field name="prepared_person" invisible="1"/>
+                <field name="remove_product_image" invisible="1"/>
+                <field name="show_table_border" invisible="1"/>
+                <field name="display_logo" invisible="1"/>
+                <field name="salesman" invisible="1"/>
+
+                <field name="bank_in_report_default_or_not" invisible="1"/>
+                <field name="header_color" invisible="1"/>
+                <field name="date_of_supply" invisible="1"/>
+                <field name="header_text_color" invisible="1"/>
+                <field name="line1_color" invisible="1"/>
+                <field name="line2_color" invisible="1"/>
+                <field name="invoice_report_layout_id" invisible="0"/>
+                <field name="preview_invoice_report_layout_id" invisible="0"/>
+            </xpath>
+            <xpath expr="//field[@name='favicon']" position="after">
+                <!--                    <field name="header_footer_in_report"/>-->
+                <label for="header_img" string="Header Image"/>
+                <div class="d-flex mx-2">
+                    <field name="header_img" widget="image" class="oe_avatar"/>
+                    <span class="o_form_label mx-3 oe_edit_only">
+                        (1175px X 150px)
+                    </span>
+                </div>
+
+                <label for="footer_img" string="Footer Image"/>
+                <div class="d-flex mx-2">
+                    <field name="footer_img" widget="image" class="oe_avatar"/>
+                    <span class="o_form_label mx-3 oe_edit_only">
+                        (1310px X 105px)
+                    </span>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="compny_fax_id"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

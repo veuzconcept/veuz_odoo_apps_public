@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Trail Balance XLSX',
     'description': '''Trail Balance XLSX ''',
     'author': "Veuz Concepts",
-    "version": "1.0",
+    "version": "0.1",
     'website': "www.veuzconcepts.com",
-    'depends': ['base', 'web', 'report_xlsx', 'base_accounting_kit'],
+    'depends': ['base', 'web',],
     'data': [
         'views/trail_balance.xml'
     ],
@@ -15,4 +16,5 @@
     },
     "category": "Accounting",
     'installable': True,
+    "images": ['static/description/banner.gif'],
 }
