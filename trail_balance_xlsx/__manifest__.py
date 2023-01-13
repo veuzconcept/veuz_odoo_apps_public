@@ -1,8 +1,8 @@
 {
     'name': 'Trail Balance XLSX',
-    'description': ''' ''',
+    'description': '''Trail Balance XLSX ''',
     'author': "Veuz Concepts",
-    "version": "15.0.1.0",
+    "version": "1.0",
     'website': "www.veuzconcepts.com",
     'depends': ['base', 'web', 'report_xlsx', 'base_accounting_kit'],
     'data': [
@@ -15,6 +15,7 @@
         ],
     },
 
+    'license': 'LGPL-3',
 
     'installable': True,
 }
