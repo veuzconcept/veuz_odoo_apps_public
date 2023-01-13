@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Bank Charges",
+    'summary': 'To Add Extra Bank Charges',
     'description': '''Bank charges''',
     'author': 'Veuz Concepts',
     "version": "0.1",

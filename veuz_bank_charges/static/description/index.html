@@ -5,6 +5,35 @@
                 <div class="container">
                     <div class="oe_styling_v8">
                         <div>
+                            <div class="panel-group mb0 mt0" role="tablist" id="priceAccordeon" style="padding:0">
+                                <div class="panel-heading mb0 mt0 collapsed" role="tab" data-toggle="collapse"
+                                     data-parent="#priceAccordeon"
+                                     data-target="#priceAccordeon_area" aria-expanded="false"
+                                     style="margin-left:0; padding:14px 14px 2px 0; text-align:right">
+                                    <strong>
+                                        <div style="background-color:#0f7595; color:white; padding:5px; margin-bottom:3px; text-align:center; border-radius:3px; white-space:nowrap; display:inline-block">
+                                            <strong style="color:white">
+                                                Supported :
+                                            </strong>
+                                        </div>
+                                        <div style="background-color:#0f7595; color:white; padding:5px; margin-bottom:3px; text-align:center; border-radius:3px; white-space:nowrap; display:inline-block">
+                                            <strong style="color:white"
+                                                    title="The tool is compatible with the Odoo Enterprise version">
+                                                <i class="fa fa-check" style="margin-left:4px"> </i>
+                                                Enterprise
+                                            </strong>
+                                        </div>
+                                        <div style="background-color:#0f7595; padding:5px; margin-top:3px; text-align:center; border-radius:3px; white-space:nowrap; display:inline-block">
+                                            <strong style="color:white"
+                                                    title="The tool is compatible with the Odoo Community version">
+                                                <i class="fa fa-check" style="margin-left:4px"> </i>
+                                                Community
+                                            </strong>
+                                        </div>
+                                    </strong>
+                                </div>
+                            </div>
+
                             <section class="oe_container lead title_box"
                                      style="text-align:center;background-color: #f0f0f042;">
                                 <div>
@@ -14,9 +43,10 @@
                                             <b>Extra Bank Charges</b>
                                         </h2>
                                         <hr style="width:80%;border: 1px solid #797979;">
-                                        <p class="oe_slogan" style="padding:5px 10px">This apps helps User to Add
-                                            Bank Charges to the Payment. User Can set Separate Account for
-                                            Bank Charges. Journal Entries will be Automatically Adjusted.</p>
+                                        <p class="oe_slogan" style="padding:5px 10px">
+                                            This module helps user to add extra bank charge in payment. User have to define separate account in journal for bank charges.
+                                            Journal entries will be automatically adjusted with this module in odoo accounting.
+                                        </p>
                                     </div>
                                 </div>
                                 <hr style="width:80%">
@@ -33,7 +63,7 @@
                                                     </div>
                                                     <h3>
                                                         <font style="vertical-align:inherit">
-                                                            Creates Account for Extra Bank Charges
+                                                            Creates Account for Bank Charges
                                                         </font>
                                                     </h3>
                                                     <p style="margin-bottom:10px">
@@ -57,7 +87,7 @@
                                                     </h3>
                                                     <p style="margin-bottom:10px">
                                                         <font style="vertical-align:inherit; font-size:15px"> Users are
-                                                            Allowed to Add Bank Charges Amount to Their Bills from the
+                                                            Allowed to Add Bank Charges Amount from the
                                                             Payment Wizard. </font>
                                                     </p>
                                                 </section>
@@ -76,7 +106,7 @@
                                                     </h3>
                                                     <p style="margin-bottom:10px">
                                                         <font style="vertical-align:inherit; font-size:15px"> Allows
-                                                            Creating Journal Entries for Extra Bank Charges. </font>
+                                                            Creating Journal Entries for Bank Charges. </font>
                                                     </p>
                                                 </section>
                                             </div>
@@ -141,8 +171,6 @@
                                 <div style="">
                                     <div>
                                         <h2 class="oe_slogan">Free Support</h2>
-                                        <h3 class="oe_slogan" style="font-size: 20px;">You will get 90
-                                            Days free support incase any bugs or issue (Except data recovery).</h3>
                                         <p class="oe_slogan" style="font-size: 18px; ">
                                             Veuz Concepts we offer end to end solution for Odoo services. Which includes
                                             analysis &amp;
