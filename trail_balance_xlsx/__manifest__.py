@@ -7,15 +7,12 @@
     'depends': ['base', 'web', 'report_xlsx', 'base_accounting_kit'],
     'data': [
         'views/trail_balance.xml'
-
     ],
-"assets": {
+    "assets": {
         "web.assets_backend": [
             # "trail_balance_xlsx/static/src/js/xlsx_controller.js",
         ],
     },
-
-    'license': 'LGPL-3',
-
+    "category": "Accounting",
     'installable': True,
 }
