@@ -4,8 +4,7 @@ from odoo.exceptions import ValidationError
 
 class PaymentRegisterInherit(models.TransientModel):
     _inherit = 'account.payment.register'
-    vz_bank_charge = fields.Float()
-
+    vz_bank_charge = fields.Monetary(currency_field='currency_id')
     is_bank = fields.Boolean(default=False)
 
     @api.onchange('journal_id')
@@ -31,6 +30,6 @@ class PaymentRegisterInherit(models.TransientModel):
         for rec in self:
             if rec.vz_bank_charge < 0:
                 raise ValidationError(_("You are not allowed to select a negative value"))
-            if rec.journal_id.type == 'bank' and not rec.journal_id.bank_charge_account:
+            if rec.vz_bank_charge > 0 and not rec.journal_id.bank_charge_account:
                 raise ValidationError(_("Please set bank charge account in the selected journal."))
         return super(PaymentRegisterInherit, self).action_create_payments()

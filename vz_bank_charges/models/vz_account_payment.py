@@ -4,7 +4,7 @@ from odoo.exceptions import UserError
 
 class AccountPayment(models.Model):
     _inherit = "account.payment"
-    vz_bank_charge = fields.Float()
+    vz_bank_charge = fields.Monetary(currency_field='currency_id')
     enable_charge = fields.Boolean(default=False)
 
     def _synchronize_from_moves(self, changed_fields):
@@ -60,7 +60,7 @@ class AccountPayment(models.Model):
                             ))
                         """updated this warning message"""
                         if any(line.partner_id != all_lines[0].partner_id for line in
-                               all_lines) and not pay.is_petty_cash_holder_id:
+                               all_lines):
                             raise UserError(_(
                                 "Journal Entry %s is not valid. In order to proceed, the journal items must "
                                 "share the same partner.",
