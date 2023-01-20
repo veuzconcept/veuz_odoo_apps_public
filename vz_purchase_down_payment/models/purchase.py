@@ -64,7 +64,7 @@ class account(models.Model):
         duplicated_moves = self.browse([r[0] for r in self._cr.fetchall()])
 
         if not self.env['ir.module.module'].sudo().search(
-                [('name', '=', 'veuz_purchase_down_payment'), ('state', '=', 'installed')]):
+                [('name', '=', 'vz_purchase_down_payment'), ('state', '=', 'installed')]):
             if duplicated_moves:
                 raise ValidationError(
                     _('Duplicated vendor reference detected. You probably encoded twice the same vendor bill/credit note:\n%s') % "\n".join(

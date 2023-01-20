@@ -6,14 +6,14 @@
         <field name="arch" type="xml">
 
             <xpath expr="//button[@name='action_create_invoice'][1]" position="replace">
-                <button name="%(veuz_purchase_down_payment.action_view_purchase_advance_payment)d" string="Create Bill"
+                <button name="%(vz_purchase_down_payment.action_view_purchase_advance_payment)d" string="Create Bill"
                         type="action" class="oe_highlight" context="{'create_bill':True}"
                         attrs="{'invisible': ['|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'in', ('no', 'invoiced'))]}"
                         data-hotkey="w"/>
             </xpath>
 
             <xpath expr="//button[@name='action_create_invoice']" position="replace">
-                <button name="%(veuz_purchase_down_payment.action_view_purchase_advance_payment)d" string="Create Bill"
+                <button name="%(vz_purchase_down_payment.action_view_purchase_advance_payment)d" string="Create Bill"
                         type="action" context="{'create_bill':True}"
                         attrs="{'invisible': ['|', '|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'not in', ('no', 'invoiced')), ('order_line', '=', [])]}"
                         data-hotkey="w"/>
