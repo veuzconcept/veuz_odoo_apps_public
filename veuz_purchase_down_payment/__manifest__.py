@@ -6,6 +6,7 @@
     "version": "15.0",
     "category": "Accounting",
     'website': "www.veuzconcepts.com",
+    'license': 'LGPL-3',
     'depends': ['base', 'web', 'account', 'stock', 'purchase'],
     "images": ['static/description/banner.gif'],
     'data': [
